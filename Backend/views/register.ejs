@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registration</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display:flex;
+    height: 120vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #6ed8ac;
+}
+header
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo
+{
+    position: relative;
+    max-width: 80px;
+}
+header ul 
+{
+    position: relative;
+    display: flex;
+}
+
+header ul li
+{
+    list-style:none;
+}
+
+header ul li a
+{
+    display: inline-block;
+    color: #333;
+    font-weight:400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position:relative;
+    
+}
+
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: #065a29;
+}
+
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box{
+    margin-bottom: 15px;
+    margin: 20px 0 12px 0;
+    width: calc(100%/2-20px);
+}
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color:#065a29;
+}
+
+form .gender-details .gender-title{
+    font-size:20px;
+    font-weight: 500;
+}
+
+form .gender-details .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+.gender-details .category label{
+    display: flex;
+    align-items: center;
+
+}
+.gender-details .category .dot{
+    height: 18px;
+    width: 18px;
+    background:#065a29;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+    border-color:#d9d9d9;
+    background:#069e45;
+}
+
+form input[type="radio"]{
+    display: none;
+}
+
+form .button{
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing:1px ;
+    background:#065a29;
+}
+form .button input:hover{
+    background:#065a29;
+}
+
+
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo"><img src="logo.png" width="70px" height="70px"></a>
+            <ul>
+                <li><a href="http://127.0.0.1:5501/Project/templates/index.html">Home</a></li>
+                <li><a href="http://127.0.0.1:5501/Project/templates/about.html">About Us</a></li>
+                <li><a href="http://localhost:5050/users/login">Login</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="http://127.0.0.1:5501/Project/templates/events.html">Events</a></li>
+                <li><a href="http://127.0.0.1:5501/Project/templates/study.html">Study</a></li>
+            </ul>
+        </header>
+        <div class="container">
+            <div class="title">Registration</div>
+            <form action="/users/register" method="POST">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input
+            type="name"
+            id="name"
+            name="name"
+            class="form-control"
+            placeholder="Enter Name"
+            value="<%= typeof name != 'undefined' ? name : '' %>"
+          />
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter Email"
+            value="<%= typeof email != 'undefined' ? email : '' %>"
+          />
+                    </div>
+                    
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Create Password"
+            value="<%= typeof password != 'undefined' ? password : '' %>"
+          />
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Confirm Password</span>
+                        <input
+            type="password"
+            id="password2"
+            name="password2"
+            class="form-control"
+            placeholder="Confirm Password"
+            value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+          />
+                    </div>
+                </div>
+                
+                <div class="button">
+                    <input type="submit" value="Register" id="submit"/>
+                </div>
+            </form>
+        </div>
+    </body>
+
+</html>
