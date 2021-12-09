@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="../Styles/style1.css">
+
+</head>
+<body>
+    
+<section class="vendor" id="vendor">
+    <div class="title">
+    <h1>Events</h1>
+    </div>
+<header>
+    <a href="#" class="logo"><img src="../Images/logo.png" width="70px" height="70px"></a>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="http://localhost:5050/users/login">Login</a></li>
+        <li><a href="http://localhost:5050/users/register">Registration</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="study.html">Study</a></li>
+    </ul>
+</header>
+
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="../Images/img5.png" alt="">
+            <div class="info">
+                <h3>New hack, who this?</h3>
+                <p>JUL 10TH - 12TH</p>
+                <a href="https://organize.mlh.io/participants/events/3566-new-hack-who-this" class="btn">Apply</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../Images/img6.png" alt="">
+            <div class="info">
+                <h3>Hackcation</h3>
+                <p>JUL 3RD - JUL 5TH</p>
+                <a href="https://organize.mlh.io/participants/events/3565-hackcation" class="btn">Apply</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../Images/img7.png" alt="">
+            <div class="info">
+                <h3>HackItShipIt</h3>
+                <p>JUL 17TH - JUL 19TH</p>
+                <a href="https://organize.mlh.io/participants/events/3593-hackitshipit" class="btn">Apply</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../Images/img8.png" alt="">
+            <div class="info">
+                <h3>SigmaHacks</h3>
+                <p>JUL 24TH - JUL 26TH</p>
+                <a href="https://sigmahacks.org/" class="btn">Apply</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../Images/img9.png" alt="">
+            <div class="info">
+                <h3>Roll for Hacking</h3>
+                <p>AUG 7TH - AUG 9TH</p>
+                <a href="https://organize.mlh.io/participants/events/3702-roll-for-hacking" class="btn">Apply</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../Images/img10.png" alt="">
+            <div class="info">
+                <h3>First Day Back hacks</h3>
+                <p>SEP 4TH - SEP 6TH</p>
+                <a href="https://organize.mlh.io/participants/events/4091-first-day-back-hacks" class="btn">Apply</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<script> 
+
+let menu = document.querySelector('#menu-bar');
+let navbar = document.querySelector('.navbar');
+
+menu.addEventListener('click', () =>{
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('nav-toggle');
+});
+
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('nav-toggle');
+}
+
+</script>
+
+
+</body>
+</html>

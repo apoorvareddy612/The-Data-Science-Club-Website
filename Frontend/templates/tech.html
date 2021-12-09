@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tech Syntax</title>
+    </head>
+    <link rel="stylesheet" href="../Styles/style3.css">
+<body>
+    <header>
+        <a href="#" class="logo"><img src="../Images/logo.png" width="70px" height="70px"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="http://localhost:5050/users/login">Login</a></li>
+            <li><a href="http://localhost:5050/users/register">Registration</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="study.html">Study</a></li>
+        </ul>
+    </header>
+    <div class="menu-header">
+        <ul>
+            <li><a href="course.html">Course</a></li>
+            <li><a href="ide.html">IDE</a></li>
+            <li><a href="project.html">Project Ideas</a></li>
+            <li><a href="tech.html">Tech Syntax</a></li>
+        </ul>
+    </div>
+    <section class="dropout" id="dropout">
+        <div class="box-section">
+            <div class="circle">
+                <button class="dropbtn"><img src="../Images/tech1.png" alt=""></button>
+                <div class="dropdown-content">
+                    <p style="color:#0fec46;">pip install tensorflow<br>import tensorflow as tf<br><br>//load the dataset<br>mnist = tf.keras.datasets.mnist<br><br>(x_train, y_train), (x_test, y_test) = mnist.load_data()
+                        x_train, x_test = x_train / 255.0, x_test / 255.0<br><br><br>For more info visit:<a href="https://www.tensorflow.org/tutorials/quickstart/beginner" target="_blank" style="color:#0fec46;font-family:menlo;">Tensorflow</a></p>
+                </div>
+            </div>
+            <div class="circle">
+                <button class="dropbtn"><img src="../Images/tech2.png" alt=""></button>
+                <div class="dropdown-content">
+                    <p style="color:rgb(231, 255, 16);">pip install numpy<br>import numpy as np<br><br>arr = np.array( [[ 1, 2, 3,
+                    [ 4, 2, 5]] )<br><br>print(type(arr)) #numpy.array<br>print(arr.ndim) #2<br>print(arr.shape) #(2,3)<br>print(arr.size) #6<br>print(ar.dtype) #int64<br><br><br>For more info Visit:<a href="https://numpy.org/doc/stable/user/quickstart.html" target="_blank" style="color:rgb(231, 255, 16);font-family:menlo;">Numpy</a></p>
+                </div>
+            </div>
+            <div class="circle">
+                <button class="dropbtn"><img src="../Images/tech3.png" alt=""></button>
+                <div class="dropdown-content">
+                    <p style="color:#ee710a;">pip install pandas<br>import pandas as pd<br>import numpy as np<br><br>ser = pd.Series()<br>print(ser)<br>data= np.array(['a','p','p'])<br>ser = pd.Series(data)<br>print(ser)<br><br><br>For more info Visit:<a href="https://pandas.pydata.org/docs/user_guide/index.html#user-guide" target="_blank" style="color:#ee710a;font-family:menlo;">Pandas</a></p>
+                </div>
+            </div>
+            <div class="circle">
+                <button class="dropbtn"><img src="../Images/tech4.png" alt=""></button>
+                <div class="dropdown-content">
+                    <p style="color:rgb(253, 0, 0);">pip install matplotlib<br>import matplotlib.pyplot as plt<br><br>x=[10,20,30,40]<br>y=[20,30,40,50]<br>plt.plot(x,y)<br>plt.show()<br><br><br>For more info Visit:<a href="https://matplotlib.org/stable/tutorials/introductory/usage.html#sphx-glr-tutorials-introductory-usage-py" target="_blank" style="color:rgb(253, 0, 0);font-family:menlo;">Matplotlib</a></p>
+                </div>
+            </div>
+            <div class="circle">
+                <button class="dropbtn"><img src="../Images/tech5.png" alt=""></button>
+                <div class="dropdown-content">
+                    <p style="color:rgb(0, 204, 255);">pip install pytorch<br>import pytorch<br><br>t1=torch.tensor([1, 2, 3, 4])<br>t2=torch.tensor([[1, 2, 3, 4],[5, 6, 7, 8],[9, 10, 11, 12]])<br>print(t1)<br>print(t2)<br>print(t1.shape)<br>print(t2.shape)<br>print(len(t1.shape))<br>print(len(t2.shape))<br><br><br>For more info Visit:<a href="https://pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html" target="_blank" style="color:rgb(0, 204, 255);font-family:menlo;">Pytorch</a></p>
+                </div>
+            </div>
+            <div class="circle">
+                <button class="dropbtn"><img src="../Images/tech6.png" alt=""></button>
+                <div class="dropdown-content">
+                    <p style="color:rgb(9, 255, 0);">import numpy as np
+                        <br>import seaborn as sns<br><br>sns.set(style="white")<br>rs = np.random.RandomState(10)
+                        <br>d = rs.normal(size=100)<br><br>sns.distplot(d, kde=True, color="m")<br><br><br>For more info Visit:<a href="https://seaborn.pydata.org/" target="_blank" style="color:rgb(9, 255, 0);font-family:menlo;">Seaborn</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
